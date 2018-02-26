@@ -1,0 +1,12 @@
+create table guzhang(
+   gz_id MEDIUMINT(9) NOT NULL AUTO_INCREMENT,
+   date DATE NOT NULL,
+   up_down VARCHAR(5) NOT NULL,
+   addr VARCHAR(30) NOT NULL,
+   variety VARCHAR(50) NOT NULL,
+   grade int(10) NOT NULL,
+   image VARCHAR(200) NOT NULL,
+   inspector VARCHAR(20) NOT NULL,
+   link int(10) NOT NULL,
+   PRIMARY KEY(my_id)
+)

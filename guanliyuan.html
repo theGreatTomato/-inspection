@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>register</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="css/manager.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+	<div class="mask" id="mask">
+		<div class="loginContainer">
+			<div class="header">请登录</div>
+			<form>
+				<select name="position" id="position">
+					<option >管理员</option>
+					<option selected="selected">检测人员</option>
+				</select>
+				<input type="text" name="user" id="user" placeholder="请输入用户id">
+				<input type="password" name="password" id="password" placeholder="请输入密码">
+			</form>
+			<p id="error"><span style="color: red">&nbsp;*&nbsp;</span><span id="info"></span></p>
+			<div class="btn">
+				<button id="submit">确定</button>
+				<button id="cancel">取消</button>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="header"></div>
+		<div class="aside">
+			<img class="logo" src="images/logo.jpeg">
+			<div class="welcome">欢迎你，管理员</div>
+			<span class="toggle">切换用户</span>
+			<span class="toggle" id="loginout">退出登录</span>
+			<div class="icon">
+				<img src="images/rw.png">
+				<p>任务查看</p>
+			</div>
+			<div class="icon">
+				<img src="images/xiuli.png">
+				<p>故障查看</p>
+			</div>
+		</div>
+		<div class="content">
+			<div class="arrange">
+				<div class="title">
+					<span></span>
+					<div class="font">任务安排</div>
+				</div>
+				<form>
+					<span style="margin-left: 0px ">检测时间:</span>
+					<input type="date" name="date">
+					<span>检测线路:</span>
+					<select id="link">
+						<option>1号线</option>
+						<option>2号线</option>
+						<option>3号线</option>
+						<option>4号线</option>
+						<option>5号线</option>
+					</select>
+					<span>检测范围: 从</span>
+					<select>
+						<option>&nbsp;&nbsp;&nbsp;&nbsp;</option>
+						<option>高新园</option>
+						<option>白石洲</option>
+						<option>世界之窗</option>
+					</select>
+					<span style="margin-left: 3px ">到</span>
+					<select>
+						<option>&nbsp;&nbsp;&nbsp;&nbsp;</option>
+						<option>深大</option>
+						<option>高新园</option>
+						<option>白石洲</option>
+						<option>世界之窗</option>
+					</select>
+					<span>检测人员:</span>
+					<select>
+						<option>小白</option>
+						<option>小红</option>
+						<option>小绿</option>
+						<option>小小切</option>
+					</select>
+				</form>
+				<button class="btn">确 定</button>
+			</div>
+			<div class="renwu">
+				<div class="title">
+					<span></span>
+					<div class="font">详细数据</div>
+				</div>
+				<table id="personData">
+					<tr><td>时间</td><td>检测线路</td><td>范围</td><td>检测人员</td></tr>
+					<tr><td>2017-5-12</td><td>1号线</td><td>什么到什么</td><td>小红</td></tr>
+					<tr><td>2017-5-12</td><td>1号线</td><td>什么到什么</td><td>小红</td></tr>
+					<tr><td>2017-5-12</td><td>1号线</td><td>什么到什么</td><td>小红</td></tr>
+					<tr><td>2017-5-12</td><td>1号线</td><td>什么到什么</td><td>小红</td></tr>
+					<tr><td>2017-5-12</td><td>1号线</td><td>什么到什么</td><td>小红</td></tr>
+				</table>
+			</div>
+		</div>
+	</div>
+<body>
+<script type="text/javascript" src = "js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src = "js/login.js"></script>
+<script type="text/javascript">
+(function(){
+	$('.toggle').eq(0).click(function(){
+		$('.mask').css('display','block');
+	})
+	$('#cancel').click(function(){
+		$('.mask').css('display','none');
+	})
+	$('.aside .icon').eq(1).click(function(){
+		location.href = "guanliyuan_guzhang.html";
+	})
+	$('.aside .icon').eq(1).mouseenter(function(){
+		$(this).css({'color':'#32a2f0'})
+	})
+	$('.aside .icon').eq(1).mouseleave(function(){
+		$(this).css({'color':'#000'})
+	})
+	//每次进来要验证身份，并取出数据
+	doAjax('data');
+	//退出登录时
+	$('#loginout').click(function(){
+		doAjax('loginout');;
+	})
+	function doAjax(string0){
+		$.post('status1.php', {
+			status:string0
+        }, function(data){
+          	console.log(data);
+          	if(data[0] === "false"){
+          		location.href = "login.html";
+          	}else{
+          		console.log(data);
+          	}
+        },"json");
+	}	
+})()
+</script>
+</body>
+</html>

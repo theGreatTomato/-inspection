@@ -1,0 +1,230 @@
+.title{
+	height: 35px;
+	margin: 10px 0px;
+	overflow: hidden;
+}
+.title span{
+	display:block;
+	float: left;
+	background: #aaa;
+	height: 35px;
+	width: 5px;
+}
+.title .font{
+	float: left;
+	font-size: 20px;
+	line-height: 35px;
+	margin-left: 5px;
+	text-align: center;
+	font-weight: bold;
+}
+.arrange form{
+	display: block;
+	overflow: hidden;
+	font-size: 14px;
+}
+.arrange form span{
+	display: inline-block;
+	margin-left: 20px;
+}
+.arrange input{
+	display: inline-block;
+}
+.arrange select{
+	padding: 2px 4px 4px;
+}
+.arrange button{
+	margin-left: 750px;
+	margin-top: 10px;
+	background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+.arrange button:hover{
+	background-color: #449D44;
+    border-color: #4cae4c;
+}
+.arrange button:active{
+	background-color: #388238;
+    border-color: #4cae4c;
+}
+.content .renwu{
+	margin-top: 40px;
+}
+.renwu #personData{
+	text-align: center;
+	border-collapse:collapse;
+	margin: 20px auto;
+}
+#personData tr:nth-child(odd){
+	background: #ddd;
+}
+#personData tr:nth-child(even){
+	background: #fff;
+}
+#personData tr:first-child{
+	background: #aaa;
+	font-weight: bold;
+} 
+#personData td{
+	padding: 4px 45px;
+}
+/***这里是故障查看的css**/
+.guzhangtu{
+	overflow: hidden;
+}
+.guzhangtu .float0{
+	float: left;
+	margin-right: 10px;
+}
+.guzhangtu p{
+	float: left;
+	font-size: 14px;
+	width: 60px;
+	text-align: center;
+	padding: 5px 12px;
+	margin: 12px 0px; 
+	margin-left:10px;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+}
+.guzhangtu .on{
+	background: #42AAEE;
+	color: #fff;
+}
+.guzhangtu #link{
+	width: 65px;
+	margin-left:20px;
+	padding: 2px 1px 6px 1px;
+	margin-top: 13px;
+}
+.guzhangtu .time0{
+	background: #ddd;
+	padding: 5px;
+	height: 25px;
+	font-size: 16px;
+	line-height: 25px;
+	font-weight: bold;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+.guzhangtu .red{
+	background: red;
+	width: 20px;
+	height: 20px;
+	float: left;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 8px;
+	line-height: 20px;
+}
+.guzhangtu .orange{
+	background: orange;
+	width: 20px;
+	height: 20px;
+	float: left;
+	border-radius: 10px;	
+	color: #fff;
+	line-height: 20px;
+	font-size: 8px;
+}
+.guzhangtu table{
+	margin-top: 20px;
+	text-align: center;
+	border-collapse:collapse;
+}
+.guzhangtu table tr:first-child th{
+	border:0px solid #fff; 
+	width: 44px;
+	vertical-align: bottom;
+}
+.guzhangtu table tr:first-child td{
+	font-size: 14px;
+	width: 20px;
+	border:0px solid #fff; 
+	vertical-align: bottom;
+
+}
+.guzhangtu table td,th{
+	border:1px solid #ddd; 
+	padding: 3px 3px;
+}
+.longData{
+	margin-top: 60px;
+	margin-bottom:60px;
+}
+.longData table{
+	border-collapse:collapse;
+	margin-top: 10px;
+}
+.longData table th{
+	border:0px solid #fff; 
+	background: #8288ad;
+	width: 100px;
+	padding: 5px 10px;
+}
+.longData table td{
+	text-align: center;
+	width: 100px;
+	padding: 5px 10px;
+}
+.longData table .image_td{
+	color: #00f;
+}
+.longData table .image_td:hover{
+	text-decoration: underline;
+	cursor:pointer;
+}
+.longData table tr:nth-child(odd){
+	background: #ddd;
+}
+.longData .tab{
+	margin-top:30px;
+	text-align: center;
+}
+.longData .tab ul{
+	overflow: hidden;
+	display: inline-block;
+}
+.longData .tab ul li{
+	font-size: 8px;
+	list-style-type: none;
+	float: left;
+	border:1px solid #222;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin-left: 5px;
+	border-radius: 4px;
+}
+.longData .tab ul li.off{
+	border: none;
+	width: 60px;
+}
+.longData .tab #page_index{
+	width: 40px;
+	height: 25px;
+	text-align: center;
+	text-align: 30px;
+	margin-left: 10px
+}
+.longData .tab button{
+	padding: 3px 10px;
+}
+.longData .tab .on:hover{
+	border-color: #32a2f0;
+}
+.longData .tab .on:active{
+	background:#32a2f0;
+}
+#image_mask img{
+	display: block;
+	width: 300px;
+	margin-top: 40px;
+	margin-left: 400px;
+}
+#image_mask button{
+	display: block;
+	margin-left: 500px;
+	margin-top: 20px;
+}

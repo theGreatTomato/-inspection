@@ -1,0 +1,21 @@
+create table guzhang(
+   gz_id MEDIUMINT(9) NOT NULL AUTO_INCREMENT,
+   date DATETIME NOT NULL,
+   up_down VARCHAR(5) NOT NULL,
+   addr VARCHAR(30) NOT NULL,
+   variety VARCHAR(50) NOT NULL,
+   grade int(10) NOT NULL,
+   image VARCHAR(200) NOT NULL,
+   inspector VARCHAR(20) NOT NULL,
+   link int(10) NOT NULL,
+   PRIMARY KEY(my_id)
+)
+
+date：故障的时间
+up_down：上下行？
+addr ： 地点
+variety ：种类
+grade ： 故障等级
+image：故障图片
+inspector：检修人员
+link：几号线

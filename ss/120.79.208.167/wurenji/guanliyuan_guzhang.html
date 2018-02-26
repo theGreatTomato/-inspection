@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>register</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="css/manager.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+	<div class="mask" >
+		<div class="loginContainer">
+			<div class="header">请登录</div>
+			<form>
+				<select name="position" id="position">
+					<option >管理员</option>
+					<option selected="selected">检测人员</option>
+				</select>
+				<input type="text" name="user" id="user" placeholder="请输入用户id">
+				<input type="password" name="password" id="password" placeholder="请输入密码">
+			</form>
+			<p id="error"><span style="color: red">&nbsp;*&nbsp;</span><span id="info"></span></p>
+			<div class="btn">
+				<button id="submit">确定</button>
+				<button id="cancel">取消</button>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="header"></div>
+		<div class="aside">
+			<img class="logo" src="images/logo.jpeg">
+			<div class="welcome">欢迎你，管理员</div>
+			<span class="toggle">切换用户</span>
+			<span class="toggle" id="loginout">退出登录</span>
+			<div class="icon">
+				<img src="images/rw.png">
+				<p>任务查看</p>
+			</div>
+			<div class="icon">
+				<img src="images/xiuli.png">
+				<p>故障查看</p>
+			</div>
+		</div>
+		<div class="content">
+			<div class="guzhangtu">
+				<div class="title  float0">
+					<span></span>
+					<div class="font">故障图</div>
+				</div>
+				<p>任务栈</p><p class="on"> 全栈</p>
+				<select id="link">
+						<option>1号线</option>
+				</select>
+				<span style="margin-left: 20px">从</span>
+				<input type="date" name="startDate" id="startDate">
+				<span>到</span>
+				<input type="date" name="endDate" id="endDate">
+				<button class="btn btn-blue" style="margin-left: 20px;">确定</button>
+				<div style="clear: both;"></div>
+				<div class="time0"></div>
+				<div style="overflow: hidden;margin-bottom: 8px;">
+					<div class="orange"></div>&nbsp;&nbsp;一级故障
+				</div>
+				<div style="overflow: hidden;">	
+					<div class="red"></div>&nbsp;&nbsp;二级故障
+				</div>
+				<table>
+					<tr id="stationName">
+						<th>方向</th>
+						<th>总计</th>
+						<td>罗湖</td>
+						<td>国贸</td>
+						<td>老街</td>
+						<td>大剧院</td>
+						<td>科学馆</td>
+						<td>华强路</td>
+						<td>岗厦</td>
+						<td>会展中心</td>
+						<td>购物公园</td>
+						<td>香蜜湖</td>
+						<td>车公庙</td>
+						<td>竹子林</td>
+						<td>侨城东</td>
+						<td>华侨城</td>
+						<td>世界之窗</td>
+						<td>白石洲</td>
+						<td>高新园</td>
+						<td>深大</td>
+						<td>桃园</td>
+						<td>大新</td>
+						<td>鲤鱼门</td>
+						<td>前海湾</td>
+						<td>新安</td>
+						<td>宝安中心</td>
+						<td>宝体</td>
+						<td>坪洲</td>
+						<td>西乡</td>
+						<td>固戍</td>
+						<td>后瑞</td>
+						<td>机场东</td>
+
+					</tr>
+
+					<tr id="up">
+						<th>上行</th>
+						<th></th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr id="down">
+						<th>下行</th>
+						<th></th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+			<div class="longData">
+				<div class="title">
+					<span></span>
+					<div class="font">详细数据</div>
+				</div>
+				<table id="LDTable">
+					<tr id="tableHead">
+					<th>时间</th>
+					<th>上下行</th>
+					<th>地点</th>
+					<th>故障类型</th>
+					<th>故障程度</th>
+					<th>查看故障</th>
+					<th>检测人员</th>
+					</tr>					
+				</table>
+				<div class="tab">
+					<ul>
+						<li class="on"><</li>
+						<li class="on">></li>
+						<li class="last off">max：</li>
+						<input type="text" name="page_index" id="page_index" placeholder='1'>
+						<button class="btn btn-blue">确定</button>
+					</ul>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div class="mask" id="image_mask">
+		<img class="gz_image" src="">
+		<button id="cancel" class="btn btn-blue" style="display:block">取消</button>
+	</div>
+<body>
+<script type="text/javascript" src = "js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src = "js/login.js"></script>
+<script type="text/javascript" src = "js/callback.js"></script>
+<script type="text/javascript">
+(function(){
+	$('#image_mask button').click(function(){
+		$('#image_mask').css('display','none') 
+	})
+	$('.toggle').eq(0).click(function(){
+		$('.mask').css('display','block');
+	})
+	$('#cancel').click(function(){
+		$('.mask').css('display','none');
+	})
+	$('.aside .icon').eq(0).click(function(){
+		location.href = "guanliyuan.html";
+	})
+	$('.guzhangtu p').click(function(){
+		$('.guzhangtu p').removeClass('on');
+		$(this).addClass('on')	
+	})
+//日期的更新
+	$('#startDate').val(getToday());
+	$('#endDate').val(getToday());
+	$('.guzhangtu .btn').click(function(){
+			updataDiv();
+	})
+	updataDiv();
+	function updataDiv(){
+		var str_startDate = $('#startDate').val();
+		var str_endDate =  $('#endDate').val();
+		var reg = /-/g;
+		var num_startDate = parseInt(str_startDate.replace(reg,''));
+		var num_endDate = parseInt(str_endDate.replace(reg,''))
+		if(num_startDate > num_endDate){
+			$('#startDate').val(str_endDate);
+			$('#endDate').val(str_startDate);	
+		}
+		$('.time0').text(function(){
+			if($('#startDate').val() === $('#endDate').val()){
+				return $('#startDate').val();
+			}
+			else{
+				return '从 '+$('#startDate').val()+' 到 '+$('#endDate').val();
+			}
+		})	
+	}
+	function getToday(){
+		var d = new Date();
+		var day = d.getDate();	
+		var m = d.getMonth()+1;
+		var y = d.getFullYear();
+		return y+'-'+m+'-'+day;
+	}
+
+	$('.aside .icon').eq(0).mouseenter(function(){
+		$(this).css({'color':'#32a2f0'})
+	})
+	$('.aside .icon').eq(0).mouseleave(function(){
+		$(this).css({'color':'#000'})
+	})
+	//每次进来要验证身份，并取出数据
+	doAjax('data');
+	//退出登录时
+	$('#loginout').click(function(){
+		doAjax('loginout');;
+	})
+	function doAjax(string0){
+		$.post('status1.php', {
+			status:string0
+        }, function(data){
+          	if(data[0] === "false"){
+          		location.href = "login.html";
+          	}else{
+          		callback(data);
+          	}
+        },"json");
+	}	
+})()
+</script>
+</body>
+</html>

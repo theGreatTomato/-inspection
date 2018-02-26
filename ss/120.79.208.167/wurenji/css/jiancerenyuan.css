@@ -1,0 +1,127 @@
+.title{
+	height: 35px;
+	margin: 10px 0px;
+	overflow: hidden;
+}
+.title span{
+	display:block;
+	float: left;
+	background: #aaa;
+	height: 35px;
+	width: 5px;
+}
+.title .font{
+	float: left;
+	font-size: 20px;
+	line-height: 35px;
+	margin-left: 5px;
+	text-align: center;
+	font-weight: bold;
+}
+.float0{
+	overflow: hidden;
+	margin-right: 10px;
+}
+.float0 p{
+	float: left;
+	font-size: 14px;
+	width: 60px;
+	text-align: center;
+	padding: 5px 12px;
+	margin-left:10px;
+	margin-top: 3px;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+}
+.on{
+	background: #42AAEE;
+	color: #fff;
+}
+.monitor .icon_finger{
+	margin-top: 30px;
+}
+.monitor .icon_finger img{
+	width: 30px;
+}
+.monitor .time_link{
+	margin-bottom: 10px;
+	margin-top: 3px;
+	height: 10px;
+}
+.monitor .time_link .circle{
+	background: #aaa;
+	width: 16px;
+	height: 16px;
+	float: left;
+	border-radius: 8px;
+}
+.monitor .time_link .link{
+	background: #aaa;
+	width: 848px;
+	height: 6px;
+	float: left;
+	margin-top: 5px;
+}
+.monitor .check {
+	margin-top: 20px;
+}
+.monitor .check #check_start{
+	display: inline;
+	margin-left: 400px;
+	padding: 5px 12px;
+	background: #999;
+	color: #fff;
+	border-radius: 4px;
+}
+.monitor .check #check_start:hover{
+	background: #888;
+}
+.monitor .check #check_start:active{
+	background: #555;
+}	
+.monitor .check .check_name{
+	margin-left: 280px;
+}
+.dispose{
+	margin-top: 50px;
+}	
+.dispose .image_area{
+	width: 400px;
+	float: left;
+}
+.dispose .image_area img{
+	width: 400px;
+}
+.dispose .discribe{
+	margin-left: 30px;
+	float: left;
+}
+.dispose .discribe p{
+	font-weight: bold;
+	font-size: 14px;
+	margin-bottom:10px;
+}
+.dispose .discribe p span{
+	font-weight: 300;
+	font-size: 12px;
+	border: 1px solid #ccc;
+	padding: 2px 4px;
+}
+.dispose .discribe p span.orange{
+	display: inline-block;
+	border: none;
+	padding: 0px;
+	width: 14px;
+	height: 14px;
+	border-radius: 7px;
+	background: orange;	
+} 
+.dispose .discribe p span.red{
+	display: inline-block;
+	border: none;
+	padding: 0px;
+	width: 14px;
+	height: 14px;
+	border-radius: 7px;
+	background: red;	
+}  

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>register</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+	<div class="loginContainer">
+		<div class="header">请登录</div>
+		<form>
+			<select name="position" id="position">
+				<option selected="selected">管理员</option>
+				<option>检测人员</option>
+			</select>
+			<input type="text" name="user" id="user" placeholder="请输入用户id">
+			<input type="password" name="password" id="password" placeholder="请输入密码">
+		</form>
+		<p id="error"><span style="color: red">&nbsp;*&nbsp;</span><span id="info"></span></p>
+			<button id="submit">确定</button>
+	</div>
+<body>
+<script type="text/javascript" src = "js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src = "js/login.js">
+</script>
+</body>
+</html>

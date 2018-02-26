@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>插入数据</title>
+	<style type="text/css">
+	select{
+		padding: 2px 3px 5px 3px;
+	}
+	div{
+		margin: 6px 0px;
+	}
+	input{
+		padding: 4px 3px;
+	}
+	</style>
+</head>
+<body>
+<h1>故障数据的插入</h1>
+	<form action="insertData.php" method="post" enctype="multipart/form-data">
+		<div class="input_group">
+			时间：<input type="date" name="date" required = "required">
+		</div>
+		<div class="input_group">
+			线路：
+			<select id="link" name="link">
+				<option>1号线</option>
+			</select>
+		</div>
+		<div class="input_group">
+			上下行：
+			<select id="up_down" name="up_down">
+				<option>上行</option>
+				<option>下行</option>
+			</select>
+		</div>
+		<div class="input_group">
+			地点：
+			<select id="addr" name="addr">
+				<option>罗湖</option>
+				<option>深大</option>
+				<option>世界之窗</option>
+			</select>
+		</div>
+		<div class="input_group">
+			故障类型：
+			<input type="text" name="variety" id="variety" required = "required">
+		</div>
+		<div class="input_group">
+			故障程度：
+			<select id="grade" name="grade">
+				<option>一级故障</option>
+				<option>二级故障</option>
+				<option>三级故障</option>
+			</select>
+		</div>
+		<div class="input_group">
+			故障图片：
+			<input type="file" name="fileimage" id="fileimage" /> 
+		</div>
+		<div class="input_group">
+			检测人员：
+			<input type="text" name="inspector" id="inspector" required = "required">
+		</div>
+		<button id="submit">确定</button>
+	</form>
+	<br>
+	<script type="text/javascript" src = "../js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+	</script>
+</body>
+</html>

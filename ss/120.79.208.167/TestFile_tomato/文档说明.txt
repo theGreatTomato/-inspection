@@ -1,0 +1,7 @@
+1.2ToPic.php把 二进制的文件（16进制格式）转变成图片
+2.picTo2.php把图片变成二进制数据流
+
+3.POST时候 input一定要写name 
+4."php://input" 无法识别multipart/form-data 传来的数据 
+Content-Type:application/x-www-form-urlencoded 用这种type传数据
+

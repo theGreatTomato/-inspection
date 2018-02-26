@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>检测人员</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="css/jiancerenyuan.css">
+</head>
+	<div class="mask">
+		<div class="loginContainer">
+			<div class="header">请登录</div>
+			<form>
+				<select name="position" id="position">
+					<option  selected="selected">管理员</option>
+					<option>检测人员</option>
+				</select>
+				<input type="text" name="user" id="user" placeholder="请输入用户id">
+				<input type="password" name="password" id="password" placeholder="请输入密码">
+			</form>
+			<p id="error"><span style="color: red">&nbsp;*&nbsp;</span><span id="info"></span></p>
+			<div class="btn">
+				<button id="submit">确定</button>
+				<button id="cancel">取消</button>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="header"></div>
+		<div class="aside">
+			<img class="logo" src="images/logo.jpeg">
+			<div class="welcome">欢迎你，维修人员</div>
+			<span class="toggle">切换用户</span>
+			<span class="toggle" id="loginout">退出登录</span>
+			<div class="icon">
+				<img src="images/rw.png">
+				<p>任务处理</p>
+			</div>
+			<div class="icon">
+				<img src="images/xiuli.png">
+				<p>故障处理</p>
+			</div>
+		</div>
+		<!--主要内容-->
+		<div class="content">
+			<div class="monitor">
+				<div class="float0">
+					<div class="title">
+					<span></span>
+					<div class="font">任务监控</div>
+					<p>上行</p><p class="on">下行</p>
+					</div>
+				</div>
+				<div class="icon_finger">
+					<img src="images/finger_black.png">
+				</div>
+				<div class="time_link">
+					<div class="circle"></div>
+					<div class="link"></div>
+					<div class="circle"></div>
+				</div>
+				<div class="station_name" style="font-size: 12px;">
+					<p style="float: left;">罗湖</p>
+					<p style="float: right">会展中心</p>
+					<div style="clear: both;"></div>
+				</div>
+				<div class="check">
+					<button class="btn" id="check_start">开始检测</button>
+					<span class="check_name">检测人：***</span>
+				</div>
+			</div>
+			<div class="dispose">
+				<div class="float0">
+					<div class="title">
+					<span></span>
+					<div class="font">故障处理</div>
+					<p>上行</p><p class="on">下行</p>
+					</div>
+				</div>
+				<div style="overflow: hidden;margin-top: 10px;">
+					<div class="image_area">
+						<ul>
+						<li><img src="images/4.png"></li>
+					<!--	<li><img src="images/1.png"></li>
+						<li><img src="images/2.png"></li>
+						<li><img src="images/3.png"></li>
+						<li><img src="images/4.png"></li>
+						<li><img src="images/1.png"></li>-->
+						</ul>
+					</div>
+					<div class="discribe">
+						<p style="font-size: 16px;">故障排除</p>
+						<p>故障类型：&nbsp;
+							<span>1钢轨标记</span>
+							<span>2路基道床</span>
+							<span>3侵限障碍物</span>
+							<span>4渗漏水</span>
+							<span>5路线标志</span>
+						</p>
+						<p>故障级别：&nbsp;
+							<span class="orange"></span>
+							<span>一级故障</span>
+							<span class="red"></span>
+							<span>二级故障</span>
+						</p>
+						<p>故障地址：&nbsp;
+							罗湖-国贸
+						</p>
+						<p>检测时间：&nbsp;
+							2017-**-**
+						</p>
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+<body>
+<script type="text/javascript" src = "js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src = "js/login.js"></script>
+<script type="text/javascript">
+var username=document.cookie.split(";")[0].split("=")[1];
+//JS操作cookies方法!
+//写cookies
+function getCookie(name){
+var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+if(arr=document.cookie.match(reg))
+return unescape(arr[2]);
+else
+return null;
+}
+console.log("a");
+console.log(getCookie('user'),"cookie");
+(function(){
+	$('.toggle').eq(0).click(function(){
+		$('.mask').css('display','block');
+	})
+	$('#cancel').click(function(){
+		console.log($('.cancel'))
+		$('.mask').css('display','none');
+	})
+	doAjax('1');
+	//退出登录时
+	$('#loginout').click(function(){
+		//console.log('aa')
+		doAjax('0');;
+	})
+	$('.monitor p').click(function(){
+		$('.monitor p').removeClass('on');
+		$(this).addClass('on')	
+	})
+	$('.dispose p').click(function(){
+		$('.dispose p').removeClass('on');
+		$(this).addClass('on')	
+	})
+	$('.aside .icon').eq(1).mouseenter(function(){
+		$(this).css({'color':'#5512aa'})
+	})
+	$('.aside .icon').eq(1).mouseleave(function(){
+		$(this).css({'color':'#000'})
+	})
+
+	function doAjax(num){
+		$.post('status2.php', {
+			num:num
+        }, function(data){
+          	console.log(data);
+          	if(data[0] === "false"){
+          		location.href = "login.html";
+          	}
+        },"json");
+	}	
+})()
+</script>
+</body>
+</html>
